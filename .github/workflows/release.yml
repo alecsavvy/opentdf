@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., 0.1.0, 0.2.0)'
+        required: true
+        type: string
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Validate version format
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          if ! echo "$VERSION" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+            echo "Error: Version must be in semver format (e.g., 0.1.0)"
+            exit 1
+          fi
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if tag already exists
+        run: |
+          if git rev-parse "v${{ env.VERSION }}" >/dev/null 2>&1; then
+            echo "Error: Tag v${{ env.VERSION }} already exists"
+            exit 1
+          fi
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+
+      - name: Run tests before release
+        run: go test ./pkg/...
+
+      - name: Create and push tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "v${{ env.VERSION }}" -m "Release v${{ env.VERSION }}"
+          git push origin "v${{ env.VERSION }}"
+
+      - name: Read spec version
+        id: spec_version
+        run: |
+          SPEC_VERSION=$(cat VERSION)
+          echo "spec_version=$SPEC_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: v${{ env.VERSION }}
+          body: |
+            ## OpenTDF Go Library v${{ env.VERSION }}
+
+            This release implements **OpenTDF Specification v${{ steps.spec_version.outputs.spec_version }}**.
+
+            ### Installation
+
+            ```bash
+            go get github.com/opentdf/spec@v${{ env.VERSION }}
+            ```
+
+            ### What's Changed
+
+            See the [full changelog](https://github.com/${{ github.repository }}/compare/...v${{ env.VERSION }}) for details.
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+
