@@ -23,15 +23,15 @@ This is a fork of [opentdf/spec](https://github.com/opentdf/spec) that adds a co
 ## Installation
 
 ```bash
-go get github.com/opentdf/spec
+go get github.com/alecsavvy/opentdf
 ```
 
 ## Quick Start
 
 ```go
 import (
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/opentdf"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/opentdf"
 )
 
 // Generate authority key
