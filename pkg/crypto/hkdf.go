@@ -71,4 +71,3 @@ func DeriveKeys(sharedSecret, salt, info []byte, keySizes ...int) ([][]byte, err
 
 	return keys, nil
 }
-

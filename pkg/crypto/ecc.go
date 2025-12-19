@@ -26,8 +26,8 @@ const (
 )
 
 var (
-	ErrUnsupportedCurve    = errors.New("unsupported elliptic curve")
-	ErrInvalidPublicKey    = errors.New("invalid public key")
+	ErrUnsupportedCurve     = errors.New("unsupported elliptic curve")
+	ErrInvalidPublicKey     = errors.New("invalid public key")
 	ErrInvalidCompressedKey = errors.New("invalid compressed public key format")
 )
 
@@ -304,4 +304,3 @@ func HashForSigning(data []byte) []byte {
 	hash := sha256.Sum256(data)
 	return hash[:]
 }
-

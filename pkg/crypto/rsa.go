@@ -104,4 +104,3 @@ func GenerateRSAKeyPair(bits int) (*rsa.PrivateKey, error) {
 
 	return privateKey, nil
 }
-

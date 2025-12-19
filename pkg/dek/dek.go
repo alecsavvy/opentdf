@@ -57,4 +57,3 @@ func VerifyPolicyBinding(dek []byte, policyBase64, expectedHashBase64 string) er
 	}
 	return crypto.VerifyPolicyBinding(dek, policyBase64, expectedHashBase64)
 }
-

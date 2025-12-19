@@ -415,4 +415,3 @@ func cipherName(c SymmetricCipher) string {
 		return "unknown"
 	}
 }
-

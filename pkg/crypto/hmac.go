@@ -81,4 +81,3 @@ func VerifyRootSignature(dek []byte, segmentHashes [][]byte, expectedSigBase64 s
 func CalculateSegmentHash(dek, segment []byte) []byte {
 	return HMACSHA256(dek, segment)
 }
-

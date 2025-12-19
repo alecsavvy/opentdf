@@ -65,13 +65,13 @@ type Config struct {
 
 // Writer provides NanoTDF encryption.
 type Writer struct {
-	config     Config
-	dst        io.Writer
-	buffer     bytes.Buffer
-	header     *Header
-	dek        []byte
-	ephemeral  *ecdsa.PrivateKey
-	closed     bool
+	config    Config
+	dst       io.Writer
+	buffer    bytes.Buffer
+	header    *Header
+	dek       []byte
+	ephemeral *ecdsa.PrivateKey
+	closed    bool
 }
 
 // NewWriter creates a new NanoTDF encryption writer.
@@ -429,4 +429,3 @@ func Encrypt(plaintext []byte, config Config) ([]byte, error) {
 
 	return buf.Bytes(), nil
 }
-

@@ -426,4 +426,3 @@ func NewResourceLocatorWithID(body string, protocol ProtocolEnum, keyID []byte) 
 		Identifier:     keyID,
 	}
 }
-

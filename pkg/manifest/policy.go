@@ -84,4 +84,3 @@ func PolicyFromBase64(encoded string) (*Policy, error) {
 
 	return &p, nil
 }
-

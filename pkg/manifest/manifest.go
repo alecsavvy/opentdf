@@ -116,4 +116,3 @@ func FromJSON(data []byte) (*Manifest, error) {
 	}
 	return &m, nil
 }
-

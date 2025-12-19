@@ -56,4 +56,3 @@ func UnwrapFromBase64(wrappedDEKBase64 string, privateKey *rsa.PrivateKey) ([]by
 	}
 	return Unwrap(wrapped, privateKey)
 }
-

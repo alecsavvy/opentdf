@@ -23,4 +23,3 @@ type Payload struct {
 	// Defaults to "application/octet-stream" if not provided.
 	MIMEType string `json:"mimeType,omitempty"`
 }
-

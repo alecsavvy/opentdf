@@ -26,4 +26,3 @@ func (kp *KeyPair) HasRSA() bool {
 func (kp *KeyPair) HasECC() bool {
 	return kp.ECCPrivateKey != nil || kp.ECCPublicKey != nil
 }
-

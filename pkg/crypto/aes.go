@@ -248,4 +248,3 @@ func (d *SegmentDecryptor) DecryptSegmentAt(ciphertext []byte, segmentIndex uint
 
 	return plaintext, nil
 }
-

@@ -353,4 +353,3 @@ func unwrapSplitDEK(keyAccessList []manifest.KeyAccess, config DecryptConfig) ([
 	// Combine shares
 	return dek.Combine(shares)
 }
-

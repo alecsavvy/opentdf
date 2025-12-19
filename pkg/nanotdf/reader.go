@@ -15,20 +15,20 @@ import (
 
 // Reader errors
 var (
-	ErrMissingPrivateKey       = errors.New("recipient private key is required")
-	ErrInvalidPayload          = errors.New("invalid payload format")
-	ErrDecryptionFailed        = errors.New("decryption failed")
-	ErrPolicyBindingFailed     = errors.New("policy binding verification failed")
-	ErrSignatureInvalid        = errors.New("creator signature is invalid")
-	ErrReaderClosed            = errors.New("reader is closed")
+	ErrMissingPrivateKey   = errors.New("recipient private key is required")
+	ErrInvalidPayload      = errors.New("invalid payload format")
+	ErrDecryptionFailed    = errors.New("decryption failed")
+	ErrPolicyBindingFailed = errors.New("policy binding verification failed")
+	ErrSignatureInvalid    = errors.New("creator signature is invalid")
+	ErrReaderClosed        = errors.New("reader is closed")
 )
 
 // Reader provides NanoTDF decryption.
 type Reader struct {
-	header      *Header
-	plaintext   []byte
-	pos         int
-	closed      bool
+	header    *Header
+	plaintext []byte
+	pos       int
+	closed    bool
 }
 
 // NewReader creates a new NanoTDF decryption reader.
@@ -284,4 +284,3 @@ func Decrypt(data []byte, recipientPrivateKey *ecdsa.PrivateKey) ([]byte, error)
 
 	return r.ReadAll()
 }
-

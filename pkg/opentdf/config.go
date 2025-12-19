@@ -127,4 +127,3 @@ func (c *EncryptConfig) mimeType() string {
 func (c *EncryptConfig) encryptedSegmentSize() int {
 	return c.segmentSize() + crypto.AESGCMTagSize
 }
-

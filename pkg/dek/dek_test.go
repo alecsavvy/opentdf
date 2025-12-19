@@ -278,4 +278,3 @@ func TestPolicyBinding(t *testing.T) {
 		t.Error("expected error with wrong DEK")
 	}
 }
-

@@ -112,18 +112,17 @@ func (t IdentifierType) Size() int {
 type PolicyType uint8
 
 const (
-	PolicyTypeRemote             PolicyType = 0x00
-	PolicyTypeEmbeddedPlaintext  PolicyType = 0x01
-	PolicyTypeEmbeddedEncrypted  PolicyType = 0x02
+	PolicyTypeRemote               PolicyType = 0x00
+	PolicyTypeEmbeddedPlaintext    PolicyType = 0x01
+	PolicyTypeEmbeddedEncrypted    PolicyType = 0x02
 	PolicyTypeEmbeddedEncryptedPKA PolicyType = 0x03 // With Policy Key Access
 )
 
 // Header sizes
 const (
-	MagicVersionSize = 3
-	ECCBindingSize   = 1
-	SymmetricSize    = 1
+	MagicVersionSize  = 3
+	ECCBindingSize    = 1
+	SymmetricSize     = 1
 	PayloadLengthSize = 3
-	NanoTDFIVSize    = 3 // NanoTDF uses 3-byte IV
+	NanoTDFIVSize     = 3 // NanoTDF uses 3-byte IV
 )
-

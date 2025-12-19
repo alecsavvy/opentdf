@@ -130,4 +130,3 @@ func CombineFromSplitShares(splitShares []SplitShare) ([]byte, error) {
 	}
 	return Combine(shares)
 }
-

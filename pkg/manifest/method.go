@@ -17,4 +17,3 @@ type Method struct {
 	// For AES-GCM, typically 12 bytes (96 bits).
 	IV string `json:"iv"`
 }
-

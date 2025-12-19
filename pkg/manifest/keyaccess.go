@@ -63,4 +63,3 @@ func NewKeyAccess(locator string, wrappedKey string, policyBinding PolicyBinding
 		PolicyBinding: policyBinding,
 	}
 }
-

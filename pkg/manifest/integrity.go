@@ -47,4 +47,3 @@ type Segment struct {
 	// Includes the authentication tag.
 	EncryptedSegmentSize int `json:"encryptedSegmentSize,omitempty"`
 }
-

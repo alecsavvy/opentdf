@@ -74,4 +74,3 @@ const (
 	StatementFormatBase64Binary   = "base64binary"
 	StatementFormatString         = "string"
 )
-

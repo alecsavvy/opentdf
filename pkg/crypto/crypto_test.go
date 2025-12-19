@@ -349,4 +349,3 @@ func modeName(mode ECCMode) string {
 		return "unknown"
 	}
 }
-

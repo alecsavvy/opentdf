@@ -19,4 +19,3 @@ type EncryptionInformation struct {
 	// Contains access control rules for the TDF.
 	Policy string `json:"policy"`
 }
-
