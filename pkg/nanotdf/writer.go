@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/opentdf/spec/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
 )
 
 // Writer errors

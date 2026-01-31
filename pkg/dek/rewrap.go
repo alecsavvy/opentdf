@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/opentdf/spec/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
 )
 
 // Rewrap decrypts a wrapped DEK using the authority's private key,

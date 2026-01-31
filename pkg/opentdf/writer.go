@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/alecsavvy/opentdf/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/dek"
+	"github.com/alecsavvy/opentdf/pkg/manifest"
 	"github.com/google/uuid"
-	"github.com/opentdf/spec/pkg/crypto"
-	"github.com/opentdf/spec/pkg/dek"
-	"github.com/opentdf/spec/pkg/manifest"
 )
 
 // Writer provides streaming encryption to OpenTDF format.

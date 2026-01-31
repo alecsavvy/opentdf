@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/opentdf/spec/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
 )
 
 func TestNanoTDFEncryptDecrypt(t *testing.T) {

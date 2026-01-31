@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/opentdf/spec/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
 )
 
 // Wrap encrypts a DEK using the authority's RSA public key (RSA-OAEP with SHA-256).

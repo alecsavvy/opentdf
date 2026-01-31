@@ -13,9 +13,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/opentdf/spec/pkg/crypto"
-	"github.com/opentdf/spec/pkg/manifest"
-	"github.com/opentdf/spec/pkg/opentdf"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/manifest"
+	"github.com/alecsavvy/opentdf/pkg/opentdf"
 )
 
 func main() {

@@ -16,12 +16,12 @@ import (
 	"io"
 	"log"
 
-	"github.com/opentdf/spec/pkg/crypto"
-	"github.com/opentdf/spec/pkg/opentdf"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/opentdf"
 )
 
 func main() {
-	fmt.Println("=== OpenTDF Streaming Encryption Example ===\n")
+	fmt.Println("=== OpenTDF Streaming Encryption Example ===")
 
 	// Generate authority key
 	authorityKey, err := crypto.GenerateRSAKeyPair(2048)
@@ -136,4 +136,3 @@ func main() {
 
 	fmt.Println("\n=== Example Complete ===")
 }
-

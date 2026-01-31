@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/opentdf/spec/pkg/crypto"
-	"github.com/opentdf/spec/pkg/dek"
-	"github.com/opentdf/spec/pkg/manifest"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/dek"
+	"github.com/alecsavvy/opentdf/pkg/manifest"
 )
 
 // Reader provides streaming decryption from OpenTDF format.

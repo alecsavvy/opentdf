@@ -5,8 +5,8 @@ package opentdf
 import (
 	"crypto/rsa"
 
-	"github.com/opentdf/spec/pkg/crypto"
-	"github.com/opentdf/spec/pkg/manifest"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/manifest"
 )
 
 const (

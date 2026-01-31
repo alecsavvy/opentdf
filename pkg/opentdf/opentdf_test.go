@@ -5,8 +5,8 @@ import (
 	"io"
 	"testing"
 
-	"github.com/opentdf/spec/pkg/crypto"
-	"github.com/opentdf/spec/pkg/manifest"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/manifest"
 )
 
 func TestEncryptDecryptRoundTrip(t *testing.T) {

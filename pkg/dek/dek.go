@@ -7,7 +7,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/opentdf/spec/pkg/crypto"
+	"github.com/alecsavvy/opentdf/pkg/crypto"
 )
 
 const (

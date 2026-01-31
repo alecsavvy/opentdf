@@ -1,4 +1,4 @@
-module github.com/opentdf/spec
+module github.com/alecsavvy/opentdf
 
 go 1.21
 
