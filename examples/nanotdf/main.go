@@ -1,5 +1,8 @@
 // Example: NanoTDF Compact Format
 //
+// NOTE: NanoTDF is deprecated. It was removed from the upstream OpenTDF
+// specification; pkg/nanotdf implements the frozen v4.3.0 spec.
+//
 // This example demonstrates:
 // - NanoTDF encryption using ECC (Elliptic Curve Cryptography)
 // - Different ECC curves (secp256r1, secp384r1, secp521r1)

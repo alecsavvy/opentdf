@@ -1,5 +1,9 @@
 # NanoTDF
 
+> **Deprecated.** NanoTDF was removed from the upstream [opentdf/spec](https://github.com/opentdf/spec)
+> (opentdf/spec#63). This is a frozen copy of the NanoTDF spec as of opentdf/spec 4.3.0, retained
+> because the deprecated [`pkg/nanotdf`](../../pkg/nanotdf/) package implements it.
+
 This document describes NanoTDF version v1, a compact binary data encoding format.
 
 ## 1. Problem

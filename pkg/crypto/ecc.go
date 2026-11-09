@@ -10,8 +10,8 @@ import (
 	"math/big"
 )
 
-// ECCMode represents the elliptic curve parameters used in NanoTDF.
-// Maps to the Ephemeral ECC Params Enum in the NanoTDF spec (section 3.3.1.3.2).
+// ECCMode identifies a supported elliptic curve.
+// Values match the Ephemeral ECC Params Enum of the NanoTDF v4.3.0 spec (section 3.3.1.3.2).
 type ECCMode uint8
 
 const (

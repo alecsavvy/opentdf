@@ -5,4 +5,4 @@ This directory contains the schema documentation for the base OpenTDF, and NanoT
 ## Specifications
 
 * [OpenTDF Format](OpenTDF/README.md) - The primary JSON-based TDF specification
-* [NanoTDF Format](nanotdf/README.md) - A compact binary format for resource-constrained environments
+* [NanoTDF Format](nanotdf/README.md) - A compact binary format for resource-constrained environments (deprecated, removed upstream)

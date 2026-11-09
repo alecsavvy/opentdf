@@ -12,7 +12,7 @@ type KeyPair struct {
 	RSAPrivateKey *rsa.PrivateKey
 	RSAPublicKey  *rsa.PublicKey
 
-	// ECC keys for NanoTDF format
+	// ECC keys
 	ECCPrivateKey *ecdsa.PrivateKey
 	ECCPublicKey  *ecdsa.PublicKey
 }

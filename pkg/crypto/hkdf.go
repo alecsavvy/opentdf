@@ -11,6 +11,8 @@ import (
 // Per NanoTDF spec section 4: SHA256(MAGIC_NUMBER + VERSION)
 // For NanoTDF v1 (L1L), this is:
 // SHA256([0x4c, 0x31, 0x4c]) = 3de3ca1e50cf62d8b6aba603a96fca6761387a7ac86c3d3afe85ae2d1812edfc
+//
+// Deprecated: NanoTDF was removed from the upstream OpenTDF specification.
 var NanoTDFSalt = []byte{
 	0x3d, 0xe3, 0xca, 0x1e, 0x50, 0xcf, 0x62, 0xd8,
 	0xb6, 0xab, 0xa6, 0x03, 0xa9, 0x6f, 0xca, 0x67,
@@ -19,12 +21,11 @@ var NanoTDFSalt = []byte{
 }
 
 // DeriveKey derives a symmetric encryption key from a shared secret using HKDF.
-// This is used in NanoTDF for deriving the payload encryption key from ECDH shared secret.
 //
 // Parameters:
 //   - sharedSecret: The ECDH shared secret
-//   - salt: The salt for HKDF (use NanoTDFSalt for NanoTDF)
-//   - info: Context/application-specific info (can be empty for NanoTDF)
+//   - salt: The salt for HKDF
+//   - info: Context/application-specific info (may be empty)
 //   - keySize: The desired output key size in bytes (e.g., 32 for AES-256)
 func DeriveKey(sharedSecret, salt, info []byte, keySize int) ([]byte, error) {
 	// Create HKDF reader with SHA-256
@@ -41,6 +42,8 @@ func DeriveKey(sharedSecret, salt, info []byte, keySize int) ([]byte, error) {
 
 // DeriveNanoTDFKey derives a key for NanoTDF encryption from an ECDH shared secret.
 // Uses the standard NanoTDF salt and empty info per spec section 4.
+//
+// Deprecated: NanoTDF was removed from the upstream OpenTDF specification.
 func DeriveNanoTDFKey(sharedSecret []byte, keySize int) ([]byte, error) {
 	return DeriveKey(sharedSecret, NanoTDFSalt, nil, keySize)
 }

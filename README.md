@@ -16,7 +16,7 @@ This is a fork of [opentdf/spec](https://github.com/opentdf/spec) that adds a co
 - **Zero network dependencies** - Pure cryptographic operations, no HTTP clients
 - **Streaming I/O** - `io.Reader`/`io.Writer` interfaces for memory-efficient large file handling
 - **OpenTDF format** - ZIP-based container with JSON manifest
-- **NanoTDF format** - Compact binary format for constrained environments
+- **NanoTDF format** *(deprecated)* - Compact binary format for constrained environments
 - **Key management** - DEK generation, wrapping, unwrapping, rewrapping, and splitting
 - **Agnostic naming** - Uses "Authority" and "Locator" instead of "KAS" and "URL" for decentralized systems
 
@@ -56,7 +56,7 @@ See [examples/](examples/) for more detailed usage.
 | Package | Description |
 |---------|-------------|
 | [`pkg/opentdf`](pkg/opentdf/) | OpenTDF encryption/decryption (ZIP + JSON manifest) |
-| [`pkg/nanotdf`](pkg/nanotdf/) | NanoTDF compact binary format |
+| [`pkg/nanotdf`](pkg/nanotdf/) | NanoTDF compact binary format *(deprecated)* |
 | [`pkg/crypto`](pkg/crypto/) | Cryptographic primitives (AES-GCM, RSA-OAEP, ECC, HMAC) |
 | [`pkg/dek`](pkg/dek/) | DEK generation, wrapping, splitting |
 | [`pkg/manifest`](pkg/manifest/) | Manifest struct definitions |
@@ -67,9 +67,13 @@ See [examples/](examples/) for more detailed usage.
 go run ./examples/basic/           # Encrypt/decrypt round-trip
 go run ./examples/streaming/       # Large file streaming
 go run ./examples/key_management/  # Wrap, unwrap, rewrap, split
-go run ./examples/nanotdf/         # NanoTDF compact format
+go run ./examples/nanotdf/         # NanoTDF compact format (deprecated)
 ```
 
 ## Spec Compatibility
 
 This library implements **OpenTDF Specification v4.3.0**.
+
+### Upstream sync
+
+Synced with [opentdf/spec](https://github.com/opentdf/spec) at `0a30366`. Upstream has since removed NanoTDF from the specification (opentdf/spec#63). `pkg/nanotdf` remains available but is deprecated, and [schema/nanotdf/](schema/nanotdf/README.md) is kept as a frozen v4.3.0 copy.

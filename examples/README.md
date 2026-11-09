@@ -64,7 +64,9 @@ Demonstrates DEK (Data Encryption Key) operations:
 go run ./examples/key_management/
 ```
 
-### 4. NanoTDF Format
+### 4. NanoTDF Format (deprecated)
+
+NanoTDF was removed from the upstream OpenTDF specification; `pkg/nanotdf` is kept for compatibility.
 
 Demonstrates the compact NanoTDF binary format:
 - Different ECC curves (secp256r1, secp384r1, secp521r1)
@@ -94,8 +96,8 @@ The library uses agnostic naming to support decentralized systems:
 
 ```go
 import (
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/opentdf"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/opentdf"
 )
 
 // Generate or load authority key
@@ -117,12 +119,12 @@ decrypted, _ := opentdf.Decrypt(tdfData, opentdf.DecryptConfig{
 })
 ```
 
-### NanoTDF (Compact Format)
+### NanoTDF (Compact Format, deprecated)
 
 ```go
 import (
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/nanotdf"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/nanotdf"
 )
 
 // Generate ECC key

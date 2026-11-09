@@ -5,7 +5,7 @@ A pure Go library implementing the OpenTDF and NanoTDF specifications for data-c
 ## Features
 
 - **OpenTDF Format**: ZIP-based archive with JSON manifest, streaming encryption/decryption
-- **NanoTDF Format**: Compact binary format for resource-constrained environments
+- **NanoTDF Format** *(deprecated)*: Compact binary format for resource-constrained environments
 - **Zero Network Dependencies**: KAS/authority locator is just a string - no HTTP clients
 - **Streaming I/O**: Uses `io.Reader`/`io.Writer` interfaces for memory efficiency
 - **DEK Management**: Generate, wrap, unwrap, rewrap, and split Data Encryption Keys
@@ -25,7 +25,7 @@ The library uses system-agnostic naming to support both traditional and decentra
 ## Installation
 
 ```bash
-go get github.com/opentdf/spec/pkg
+go get github.com/alecsavvy/opentdf
 ```
 
 ## Quick Start
@@ -39,9 +39,9 @@ import (
     "crypto/rsa"
     "fmt"
     
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/manifest"
-    "github.com/opentdf/spec/pkg/opentdf"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/manifest"
+    "github.com/alecsavvy/opentdf/pkg/opentdf"
 )
 
 func main() {
@@ -82,14 +82,16 @@ func main() {
 
 ### NanoTDF Encryption/Decryption
 
+> **Deprecated:** NanoTDF was removed from the upstream OpenTDF specification. `pkg/nanotdf` implements the frozen v4.3.0 spec and is kept for compatibility.
+
 ```go
 package main
 
 import (
     "fmt"
     
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/nanotdf"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/nanotdf"
 )
 
 func main() {
@@ -121,8 +123,8 @@ func main() {
 package main
 
 import (
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/dek"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/dek"
 )
 
 func main() {
@@ -164,8 +166,8 @@ import (
     "io"
     "os"
     
-    "github.com/opentdf/spec/pkg/crypto"
-    "github.com/opentdf/spec/pkg/opentdf"
+    "github.com/alecsavvy/opentdf/pkg/crypto"
+    "github.com/alecsavvy/opentdf/pkg/opentdf"
 )
 
 func main() {
@@ -202,7 +204,7 @@ pkg/
 ├── dek/        # DEK management (generate, wrap, unwrap, rewrap, split)
 ├── manifest/   # OpenTDF manifest JSON structures
 ├── opentdf/    # OpenTDF format (ZIP archive with streaming)
-├── nanotdf/    # NanoTDF format (compact binary)
+├── nanotdf/    # NanoTDF format (compact binary, deprecated)
 └── types/      # Shared types
 ```
 
@@ -223,7 +225,7 @@ go test ./pkg/... -v
 
 This library implements:
 - **OpenTDF Specification v4.3.0** - Full manifest schema, ZIP packaging, streaming
-- **NanoTDF Specification** - Binary format, all ECC modes, variable tag sizes
+- **NanoTDF Specification (v4.3.0, deprecated)** - Binary format, all ECC modes, variable tag sizes
 
 See the [schema/](../schema/) directory for the complete specifications.
 

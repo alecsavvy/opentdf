@@ -1,6 +1,10 @@
 // Package nanotdf provides encoding and decoding for NanoTDF binary format.
 // NanoTDF is a compact binary format designed for resource-constrained environments.
 // See the NanoTDF specification (schema/nanotdf/README.md) for details.
+//
+// Deprecated: NanoTDF was removed from the upstream OpenTDF specification
+// (opentdf/spec#63). This package implements the frozen v4.3.0 NanoTDF spec
+// and is kept for compatibility.
 package nanotdf
 
 import (
