@@ -1,7 +1,6 @@
 # OpenTDF Go Library
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/alecsavvy/opentdf.svg)](https://pkg.go.dev/github.com/alecsavvy/opentdf)
-[![Go Report Card](https://goreportcard.com/badge/github.com/alecsavvy/opentdf)](https://goreportcard.com/report/github.com/alecsavvy/opentdf)
 [![CI](https://github.com/alecsavvy/opentdf/actions/workflows/ci.yml/badge.svg)](https://github.com/alecsavvy/opentdf/actions/workflows/ci.yml)
 [![Go Version](https://img.shields.io/github/go-mod/go-version/alecsavvy/opentdf)](https://go.dev/)
 [![License](https://img.shields.io/github/license/alecsavvy/opentdf)](LICENSE)
