@@ -71,7 +71,7 @@ jobs:
             ### Installation
 
             ```bash
-            go get github.com/opentdf/spec@v${{ env.VERSION }}
+            go get github.com/alecsavvy/opentdf@v${{ env.VERSION }}
             ```
 
             ### What's Changed
